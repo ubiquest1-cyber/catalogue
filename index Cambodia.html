@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ubiquest Team Building</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://www.ubi-quest.com/wp-content/uploads/2025/09/background-1.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  header img { max-height: 120px; }
+  header a { text-decoration: none; }
+
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 432px;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+  .slide img { width: 100%; height: 100%; object-fit: cover; }
+  .active-slide { opacity: 1; }
+
+  h1 { text-align: center; margin-bottom: 30px; }
+  .intro {
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 1.6;
+    margin-bottom: 50px;
+  }
+
+  .benefits {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+  .benefits div {
+    background: #f9f9f9;
+    padding: 25px;
+    flex: 1;
+  }
+  .benefits h3 { margin-top: 0; }
+
+  .tab-buttons {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .tab-buttons button {
+    padding: 14px 30px;
+    margin: 0 12px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: 2px solid #8B3A29;
+    border-radius: 8px;
+    background: transparent;
+    color: #8B3A29;
+    transition: transform 0.2s, background 0.2s, color 0.2s;
+  }
+  .tab-buttons button:hover {
+    transform: scale(1.15);
+    background: #8B3A29;
+    color: #fff;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .card {
+    width: 300px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .card:hover { transform: scale(1.03); }
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .card h3 { margin: 10px; color: #8B3A29; text-align: left; }
+  .card em { display: block; margin-left: 10px; font-size: 0.9em; margin-bottom: 8px; font-style: italic; }
+  .card p { margin: 0 10px 10px 10px; color: #555; }
+
+  .details {
+    display: none;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 50px;
+  }
+  .details.active { display: block; }
+  .details h3 { color: #8B3A29; text-align: left; margin-top: 0; }
+  .details em { display: block; margin-top: 10px; font-style: italic; color:#333; }
+  .details-content { display: flex; gap: 25px; align-items: flex-start; flex-wrap: wrap; }
+  .details-content img { width: 40%; max-width: 350px; }
+  .details-content div { width: 55%; min-width: 200px; }
+  .details-content button { padding: 14px 20px; margin-top: 10px; font-size: 1em; background:#8B3A29; color:#fff; border:none; border-radius:6px; cursor:pointer; }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background: #f1f1f1;
+    margin-top: 60px;
+  }
+  .contact {
+    width: 45%;
+  }
+  .contact a { color: #000; text-decoration: none; font-weight:bold; margin:0 10px; }
+  .social-icons img { width: 50px; height: 50px; margin: 0 10px; vertical-align: middle; }
+
+  .video-embed {
+    width: 41%; /* reduced ~18% from 50% */
+    padding-bottom: 23.0625%; /* maintain 16:9 ratio */
+    position: relative;
+  }
+  .video-embed iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <a href="https://www.ubi-quest.com" target="_blank">
+      <img src="https://www.ubi-quest.com/wp-content/uploads/2017/09/logo-ubiquest-white-autour.png" alt="Ubiquest Logo">
+    </a>
+  </header>
+
+  <div class="slideshow-container">
+    <div class="slide active-slide"><img src="https://www.ubi-quest.com/wp-content/uploads/2025/09/untitled-3-recovered-1.jpg" alt="Improv Workshop"></div>
+    <div class="slide"><img src="https://www.ubi-quest.com/wp-content/uploads/2025/09/rallye.jpg" alt="The Rally"></div>
+    <div class="slide"><img src="https://www.ubi-quest.com/wp-content/uploads/2025/09/muder-mystery-2.jpg" alt="Murder Mystery"></div>
+    <div class="slide"><img src="https://www.ubi-quest.com/wp-content/uploads/2024/09/ok6.jpg" alt="Full Art Challenge"></div>
+    <div class="slide"><img src="https://www.ubi-quest.com/wp-content/uploads/2024/09/ok8.jpg" alt="Escape the Room"></div>
+    <div class="slide"><img src="https://www.ubi-quest.com/wp-content/uploads/2024/09/ok7.jpg" alt="Gamified Wine Tasting"></div>
+    <div class="slide"><img src="https://www.ubi-quest.com/wp-content/uploads/2024/09/ok1.jpg" alt="Interactive City Hunt"></div>
+    <div class="slide"><img src="https://www.ubi-quest.com/wp-content/uploads/2024/09/ok2.jpg" alt="Saigon Quest"></div>
+    <div class="slide"><img src="https://www.ubi-quest.com/wp-content/uploads/2025/09/023102_70953edc9256498c9d99ba5b4c105dd6mv2.jpg" alt="Jungle Pulse"></div>
+    <div class="slide"><img src="https://www.ubi-quest.com/wp-content/uploads/2017/01/dsc06708.jpg" alt="Urban Food and Flavor Run"></div>
+  </div>
+
+  <h1>Ubiquest Team Building Activities</h1>
+  <p class="intro">At <strong>Ubiquest</strong>, we design <strong>indoor and outdoor team building experiences</strong> that combine play, challenge, and discovery.<br>
+  Our activities strengthen collaboration, communication, and creativity, while making sure your team has fun and creates unforgettable memories.</p>
+
+  <div class="benefits">
+    <div>
+      <h3>Indoor Team Building Benefits</h3>
+      <ul>
+        <li>Perfect for any weather</li>
+        <li>Boosts creativity and problem solving</li>
+        <li>Strengthens collaboration in controlled environments</li>
+        <li>Easy to organize in offices, hotels, or venues</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Outdoor Team Building Benefits</h3>
+      <ul>
+        <li>Encourages exploration and adventure</li>
+        <li>Improves adaptability and group dynamics</li>
+        <li>Immersive cultural and real-life experiences</li>
+        <li>Engages participants in active, playful challenges</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tab-buttons">
+    <button onclick="showActivities('indoor')">Indoor Activities</button>
+    <button onclick="showActivities('outdoor')">Outdoor Activities</button>
+  </div>
+
+  <div id="cards" class="cards"></div>
+  <div id="details" class="details"></div>
+
+  <div class="footer">
+    <div class="contact">
+      <h3>Contact Ubiquest</h3>
+      <p>Phone / WhatsApp: (+351) 967 155 853</p>
+      <p>Email: <a href="mailto:info@ubi-quest.com">info@ubi-quest.com</a></p>
+      <p>Website: <a href="https://www.ubi-quest.com" target="_blank">www.ubi-quest.com</a></p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/ubiquest/" target="_blank"><img src="http://www.ubi-quest.com/wp-content/uploads/2025/09/instagram-icon-transparent.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/ubiquest/" target="_blank"><img src="https://www.ubi-quest.com/wp-content/uploads/2025/09/facebook_logo_square.png" alt="Facebook"></a>
+        <a href="https://www.youtube.com/@ubiquestvietnam1725" target="_blank"><img src="https://www.ubi-quest.com/wp-content/uploads/2025/09/yout-1.jpg" alt="YouTube"></a>
+      </div>
+    </div>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/P6p4vUvUEZk" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Slideshow
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+function showSlides(){
+  slides.forEach(s=> s.classList.remove('active-slide'));
+  slideIndex++;
+  if(slideIndex > slides.length) slideIndex = 1;
+  slides[slideIndex - 1].classList.add('active-slide');
+  setTimeout(showSlides, 5000);
+}
+showSlides();
+
+// Activities arrays
+const indoorActivities = [
+  {title:"The Rally", duration:"3h", img:"https://www.ubi-quest.com/wp-content/uploads/2025/09/rallye.jpg", snippet:"Creative challenges, puzzles & mini-games.", description:"Perfect for corporate events, the Rally is a series of workshops designed to boost team spirit, coordination, communication, and enhance soft skills. Create your own by selecting 3 or more workshops among our hilarious challenges.", price:"from 650.000 VND + VAT"},
+  {title:"Improv Workshop", duration:"2h", img:"https://www.ubi-quest.com/wp-content/uploads/2025/09/untitled-3-recovered-1.jpg", snippet:"Trust, creativity and problem-solving.", description:"Treat employees to an unforgettable experience where they can learn to trust one another, build confidence, turn conflicts into opportunities and unleash creativity to solve problems. Improv theater requires performers to be present, listen carefully, contribute freely and adapt constantly.", price:"from 590.000 VND + VAT"},
+  {title:"Murder Mystery", duration:"4h", img:"https://www.ubi-quest.com/wp-content/uploads/2025/09/muder-mystery-2.jpg", snippet:"Solve a mystery in your office or venue.", description:"A 4-hour murder mystery concept that can be organised at a restaurant, a museum, or your office. Teams investigate clues and interact to solve the mystery while having a fun and engaging experience.", price:"from 1.300.000 VND + VAT"},
+  {title:"Full Art Challenge", duration:"2h30", img:"https://www.ubi-quest.com/wp-content/uploads/2024/09/ok6.jpg", snippet:"Three artistic challenges in teams.", description:"The Full Art Challenge consists of 3 artistic challenges played in teams of 2 or 3. These challenges bring you on a hilarious journey with your friends and colleagues.", price:"from 535.000 VND + VAT"},
+  {title:"Escape the Room", duration:"2h", img:"https://www.ubi-quest.com/wp-content/uploads/2024/09/ok8.jpg", snippet:"Solve puzzles against the clock.", description:"Everyone plays against each other and together. Who will be the first to stop the countdown and save everyone? Or will they fail together and face the consequences?", price:"from 455.000 VND + VAT"},
+  {title:"Gamified Wine Tasting", duration:"2h", img:"https://www.ubi-quest.com/wp-content/uploads/2024/09/ok7.jpg", snippet:"Wine tasting with a fun twist.", description:"A gamified wine tasting experience where teams explore and learn about wines while competing in fun challenges. Participants are taught how to taste wine properly, learn aroma identification, and discover pairing techniques.", price:"from 950.000 VND + VAT"}
+];
+
+const outdoorActivities = [
+  {title:"Interactive City Hunt", duration:"3h", img:"https://www.ubi-quest.com/wp-content/uploads/2024/09/ok1.jpg", snippet:"Urban rally with quiz & riddles.", description:"An urban rally using a mobile app and competing through a series of quizzes, riddles and missions through historically and culturally important venues. Players gamify the city, learn and play.", price:"from 540.000 VND + VAT"},
+  {title:"Saigon Quest", duration:"3h", img:"https://www.ubi-quest.com/wp-content/uploads/2024/09/ok2.jpg", snippet:"Amazing race-style city rally.", description:"A Saigon Quest is an amazing race style rally through the city with real-life challenges, quizzes, and smart riddles. The dragon statue awaits the team who wins.", price:"from 740.000 VND + VAT"},
+  {title:"Jungle Pulse", duration:"24h", img:"https://www.ubi-quest.com/wp-content/uploads/2025/09/023102_70953edc9256498c9d99ba5b4c105dd6mv2.jpg", snippet:"Adventure in Ta Lai jungle.", description:"A 2-day / 1-night excursion in the jungle area of Ta Lai. Teams compete in soft adventure challenges over 24 hrs to see which team will exit the jungle as the winner.", price:"from 5.190.000 VND + VAT"},
+  {title:"Urban Food and Flavor Run", duration:"3h", img:"https://www.ubi-quest.com/wp-content/uploads/2017/01/dsc06708.jpg", snippet:"Taste and smell-based challenges.", description:"A game in Cholon where taste and smell are key. Orienteering through the area, participants learn about Cho Lon's culture, explore markets, and complete challenges based on food, herbs, fruits, and traditional Chinese medicine.", price:"from 855.000 VND + VAT"},
+  {title:"The Box Cho Lon", duration:"3h", img:"https://www.ubi-quest.com/wp-content/uploads/2024/09/ok4.jpg", snippet:"Locate and open the hidden box.", description:"A box is hidden somewhere in the game zone. Using a mobile app to guide the players, teams explore and compete to be the first to locate and open THE BOX.", price:"from 740.000 VND + VAT"}
+];
+
+function showActivities(type){
+  const cardsDiv = document.getElementById("cards");
+  const detailsDiv = document.getElementById("details");
+  detailsDiv.classList.remove("active");
+  detailsDiv.innerHTML = "";
+  cardsDiv.innerHTML = "";
+  const activities = type === "indoor" ? indoorActivities : outdoorActivities;
+  activities.forEach(activity => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<img src="${activity.img}" alt="${activity.title}">
+      <h3>${activity.title}</h3>
+      <em>Duration: ${activity.duration}</em>
+      <p>${activity.snippet}</p>`;
+    card.onclick = () => {
+      detailsDiv.classList.add("active");
+      detailsDiv.innerHTML = `<h3>${activity.title}</h3>
+        <em>Duration: ${activity.duration}</em>
+        <div class="details-content">
+          <img src="${activity.img}" alt="${activity.title}">
+          <div>
+            <p>${activity.description}</p>
+            <em>Price ${activity.price}</em>
+            <p><a href="mailto:info@ubi-quest.com?subject=${activity.title} Inquiry"><button>Send a request</button></a></p>
+          </div>
+        </div>`;
+    };
+    cardsDiv.appendChild(card);
+  });
+}
+
+// Initialize with indoor activities
+showActivities('indoor');
+</script>
+</body>
+</html>
